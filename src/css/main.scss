@@ -1,5 +1,5 @@
 
-$screen-phone-m: "screen and (max-width: 700px)";
+$screen-phone-m: "screen and (max-width: 740px)";
 $screen-phone-s: "screen and (max-width: 500px)";
 
 $black: black;
@@ -145,6 +145,13 @@ header {
         border: 1px solid lighten($col__border, 70%);
         box-shadow: 0 5px 10px -2px rgba($black, 0.4), 0 2px 4px -1px rgba($black, 0.6);
       }
+    }
+  }
+
+  @media #{$screen-phone-m} {
+    justify-content: center;
+    .header__navigation, .header__loginarea {
+      display: none;
     }
   }
 
@@ -356,6 +363,7 @@ header {
   min-width: 212px;
   width: 100%;
   max-width: 500px;
+  margin-bottom: 5rem;
   @media #{$screen-phone-s} {
     margin-top: 10px;
     min-width: 100%;

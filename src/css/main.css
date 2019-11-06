@@ -1,0 +1,447 @@
+@media screen and (max-width: 500px) {
+  .hideon-s {
+    display: none !important;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto';
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  color: #333;
+}
+
+a:visited {
+  color: #333;
+}
+
+.flipx {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-size: 1.5rem;
+  background: #25a3ff;
+  padding: 1rem 0 1rem 0;
+  -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+header .header__logo {
+  margin-left: 1rem;
+}
+
+header .header__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header__navigation a {
+  margin: 0 0.3rem 0 0.3rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  padding: 0.15rem 0.25rem;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+header .header__navigation a:hover {
+  border: 1px solid #333333;
+}
+
+header .header__loginarea {
+  margin-right: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+header .header__loginarea .loginBtn {
+  width: 3rem;
+}
+
+header .header__loginarea .signupBtn {
+  width: 3.8rem;
+}
+
+header .header__loginarea a {
+  text-decoration: none;
+  background: white;
+  -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  border: 1px solid transparent;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.25rem;
+  -webkit-transition: 0.1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
+}
+
+header .header__loginarea a:hover {
+  border: 1px solid white;
+  -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100%;
+  background: #feeefe;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.page section {
+  padding: 0 5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .page section {
+    padding: 0 0.5rem;
+  }
+}
+
+.page section h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.page .page__divider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 2px;
+  margin: 1px 0;
+  -webkit-box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.page .page__inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-width: 100%;
+  height: 100%;
+}
+
+.page .page__inside h1 {
+  font-size: 2.5rem;
+}
+
+.page .page__inside .section__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0 2rem 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .page .page__inside .section__main {
+    padding: 0;
+  }
+}
+
+.page .page__inside .section__main .section__picture {
+  width: 80%;
+  max-width: 1000px;
+  height: auto;
+  padding: 0;
+  margin: 0 2rem 0 2rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 500px) {
+  .page .page__inside .section__main .section__picture {
+    width: 100%;
+    margin: 0 0 1rem 0;
+    border-radius: 0;
+  }
+}
+
+.page .page__inside .section__main p {
+  font-size: 1.5rem;
+}
+
+.payments__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  min-width: 100%;
+  text-align: left;
+  margin: 0 0 5rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+.payments__container .paymentCard {
+  min-width: 300px;
+  max-width: 500px;
+  width: 33%;
+  margin: 0.2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 31%;
+          flex: 1 0 31%;
+}
+
+.payments__container .paymentCard h2 {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .payments__container .paymentCard {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+.payment__works__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+@media screen and (max-width: 500px) {
+  .payment__works__container {
+    padding: 0 3rem;
+  }
+}
+
+.payment__works__container span {
+  font-size: 3rem;
+}
+
+.payment__works__container .payment__works__centericon {
+  font-size: 20rem;
+}
+
+.payment__works__container .payment__works__icon__holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.payment__works__container .payment__works__icon__holder span {
+  margin-bottom: 1.2rem;
+}
+
+.payment__works__container .payment__works__icon__holder .payment__works__icon__holder__icon {
+  margin: 0;
+  font-size: 5rem;
+}
+
+.nopage__error__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin-top: 3rem;
+}
+
+.nopage__error__container .nopage__error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nopage__error__container .nopage__error span {
+  font-size: 1.5rem;
+}
+
+.nopage__error__container .nopage__error .errorIcon {
+  font-size: 3rem;
+}
+
+.about__card {
+  margin: 0 2rem;
+  max-width: 1000px;
+}
+
+@media screen and (max-width: 500px) {
+  .about__card {
+    margin: 0;
+  }
+}
+
+.team__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.team__container .team__card {
+  margin: 0 0.5rem 1rem 0.5rem;
+  width: 200px;
+}
+
+@media screen and (max-width: 500px) {
+  .team__container .team__card {
+    width: 100%;
+  }
+}
+
+.chart {
+  background: transparent;
+  width: 500px;
+  height: 150px;
+  border-left: 1px dotted #555;
+  border-bottom: 1px dotted #555;
+}
+
+.chartPaper {
+  width: 45%;
+}
+
+.chartRow {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.chartRow .chartCell {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.chartRow:hover {
+  background: orange;
+}
+
+.chartRow:hover .chartCell {
+  color: #feeefe;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: orange;
+  font-size: 1.2rem;
+}
+
+footer span {
+  margin: 0 0.2rem 0 0.25rem;
+}
+
+footer .dot {
+  font-size: 0.6rem;
+}
+/*# sourceMappingURL=main.css.map */

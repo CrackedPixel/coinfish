@@ -64,22 +64,46 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
   font-size: 1.5rem;
   background: #25a3ff;
-  padding: 1rem 0 1rem 0;
+  padding: 0.5rem 0 0.5rem 0;
   -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
-header .header__logo {
-  margin-left: 1rem;
+header .header__logo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 0 1rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  text-decoration: none;
+}
+
+header .header__logo__container .header__logo {
+  width: 50px;
+  height: auto;
+}
+
+header .header__logo__container span {
+  margin-left: 5px;
+  font-size: 1.5rem;
 }
 
 header .header__navigation {
@@ -149,6 +173,9 @@ header .header__loginarea a:hover {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .page section {
@@ -400,8 +427,21 @@ header .header__loginarea a:hover {
   border-bottom: 1px dotted #555;
 }
 
+.chartProgress {
+  margin-top: 2rem;
+}
+
 .chartPaper {
-  width: 45%;
+  min-width: 212px;
+  width: 100%;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 500px) {
+  .chartPaper {
+    margin-top: 10px;
+    min-width: 100%;
+  }
 }
 
 .chartRow {

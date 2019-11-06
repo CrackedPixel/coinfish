@@ -7,9 +7,12 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 const BTCGraph = () => {
   const [BTCData, setBTCData] = useState();
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showChart, setShowChart] = useState(false);
   const BTCObject = [];
 
   useEffect(() => {
@@ -19,10 +22,16 @@ const BTCGraph = () => {
       setBTCData(data.bpi);
       setIsLoaded(true);
     })
+    .then(() =>{
+      setTimeout(() => {
+        setShowChart(true);
+      }, 1500)
+    })
   }, []);
 
+  const loadingBar = <section ClassName="section__main"><CircularProgress className="chartProgress"/></section>;
 
-  if (!isLoaded) return null;
+  if (!isLoaded || !showChart) return loadingBar;
 
   let onlyKeys = Object.keys(BTCData);
   let onlyPrices = [];

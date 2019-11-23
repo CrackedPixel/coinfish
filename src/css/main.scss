@@ -107,12 +107,14 @@ header {
 
   .header__navigation {
     display: flex;
+
     a {
       margin: 0 0.3rem 0 0.3rem;
       text-decoration: none;
       border: 1px solid transparent;
       padding: 0.15rem 0.25rem;
       transition: 0.2s all ease-in-out;
+      
       &:hover {
         border: 1px solid lighten($black, 20%);
       }
@@ -130,9 +132,11 @@ header {
       // background: $col__secondary;
       width: 3rem;
     }
+
     .signupBtn {
       width: 3.8rem;
     }
+
     a {
       text-decoration: none;
       background: $white;
@@ -181,6 +185,7 @@ header {
     display: none;
     margin-left: -1rem;
   }
+
   ._openMenu {
     width: 2.2rem;
     height: 2.2rem;
@@ -193,12 +198,15 @@ header {
 
   @media #{$screen-phone-m} {
     justify-content: center;
+
     .header__navigation, .header__loginarea {
       display: none;
     }
+
     .header__menubtn__toggle {
       display: flex;
     }
+
     ._closeMenu, ._openMenu {
       display: flex;
     }
@@ -215,11 +223,8 @@ header {
   justify-content: center;
 
   section {
-    // display: flex;
-    // width: 100%;
-    // flex-flow: column nowrap;
-    // align-items: center;
     padding: 0 5rem;
+
     @media #{$screen-phone-s}{
       padding: 0 0.5rem;
     }
@@ -270,6 +275,7 @@ header {
         margin: 0 2rem 0 2rem;
         border-radius: 10px;
         box-shadow: 0 5px 10px -2px rgba($black, 0.4), 0 2px 4px -1px rgba($black, 0.6);
+
         @media #{$screen-phone-s} {
           width: 100%;
           margin: 0 0 1rem 0;
@@ -320,6 +326,7 @@ header {
     h2 {
       text-align: center;
     }
+
     @media #{$screen-phone-s}{
       width: 100%;
       margin: 0.5rem 0;
@@ -360,13 +367,16 @@ header {
   display: flex;
   flex-flow: column nowrap;
   margin-top: 3rem;
+
   .nopage__error {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+
     span {
       font-size: 1.5rem;
     }
+
     .errorIcon {
       font-size: 3rem;
     }
@@ -376,6 +386,7 @@ header {
 .about__card {
   margin: 0 2rem;
   max-width: 1000px;
+
   @media #{$screen-phone-s} {
     margin: 0;
   }
@@ -387,9 +398,11 @@ header {
   width: 100%;
   justify-content: center;
   margin-bottom: 5rem;
+
   .team__card {
     margin: 0 0.5rem 1rem 0.5rem;
     width: 200px;
+
     @media #{$screen-phone-s} {
       width: 100%;
     }
@@ -413,6 +426,7 @@ header {
   width: 100%;
   max-width: 500px;
   margin-bottom: 5rem;
+
   @media #{$screen-phone-s} {
     margin-top: 10px;
     min-width: 100%;
@@ -422,12 +436,14 @@ header {
 
 .chartRow {
   transition: 0.5s ease-in-out;
+
   .chartCell {
     transition: 0.5s ease-in-out;
   }
 
   &:hover {
     background: $col__primary;
+
     .chartCell {
       color: $offwhite;
     }
@@ -446,9 +462,11 @@ footer {
   // background: $col__primary;
   background: $col__primary;
   font-size: 1.2rem;
+
   span {
     margin: 0 0.2rem 0 0.25rem;
   }
+
   .dot {
     font-size: 0.6rem;
   }

@@ -72,7 +72,8 @@ header {
           justify-content: space-between;
   width: 100%;
   font-size: 1.5rem;
-  background: #25a3ff;
+  background: -webkit-gradient(linear, left top, right top, from(#25a3ff), to(#58b9ff));
+  background: linear-gradient(to right, #25a3ff, #58b9ff);
   padding: 0.5rem 0 0.5rem 0;
   -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
@@ -164,6 +165,48 @@ header .header__loginarea a:hover {
           box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
 }
 
+header .header__menubtn__toggle {
+  padding: 1rem 2rem 2rem 2rem;
+  top: 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  position: fixed;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0c98ff), to(#58b9ff));
+  background: linear-gradient(to bottom, #0c98ff, #58b9ff);
+  z-index: 1000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+header .header__menubtn__toggle hr {
+  margin: 0.5rem 0;
+  color: transparent;
+}
+
+header .header__menubtn__toggle a:first-of-type {
+  margin-top: 1rem;
+}
+
+header .header__menubtn__toggle.hidden {
+  top: -20rem !important;
+}
+
+header ._closeMenu {
+  width: 3rem;
+  height: 3rem;
+  display: none;
+}
+
+header ._openMenu {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: none;
+}
+
 @media screen and (max-width: 740px) {
   header {
     -webkit-box-pack: center;
@@ -172,6 +215,16 @@ header .header__loginarea a:hover {
   }
   header .header__navigation, header .header__loginarea {
     display: none;
+  }
+  header .header__menubtn__toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header ._closeMenu, header ._openMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

@@ -7,6 +7,7 @@ $white: white;
 $offwhite: #feeefe;
 $col__primary: orange;
 $col__secondary: #25a3ff;
+$col__secondaryGradient: linear-gradient(to right, #25a3ff, lighten(#25a3ff, 10%));
 $col__border: #777;
 $col__font--primary: #333;
 $col__font--url: #333;
@@ -71,7 +72,7 @@ header {
   width: 100%;
 
   font-size: 1.5rem;
-  background: $col__secondary;
+  background: $col__secondaryGradient;
   // background: $offwhite;
   // background: lighten($offwhite, 5%);
 
@@ -148,10 +149,55 @@ header {
     }
   }
 
+  .header__menubtn__toggle {
+    padding: 1rem 2rem 2rem 2rem;
+    top: 0;
+    display: none;
+    flex-flow: column nowrap;
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(to bottom, darken($col__secondary, 5%), lighten($col__secondary, 10%));
+    z-index: 1000;
+    transition: all 1s;
+
+    hr {
+      margin: 0.5rem 0;
+      color: transparent;
+    }
+
+    a:first-of-type {
+      margin-top: 1rem;
+      // text-decoration: none;
+      // border-bottom: 1px solid $col__font--primary;
+    }
+
+    &.hidden {
+      // display: none !important;
+      top: -20rem !important;
+    }
+  }
+
+  ._closeMenu {
+    width: 3rem;
+    height: 3rem;
+    display: none;
+  }
+  ._openMenu {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: none;
+  }
+
   @media #{$screen-phone-m} {
     justify-content: center;
     .header__navigation, .header__loginarea {
       display: none;
+    }
+    .header__menubtn__toggle {
+      display: flex;
+    }
+    ._closeMenu, ._openMenu {
+      display: flex;
     }
   }
 

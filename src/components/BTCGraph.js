@@ -29,7 +29,7 @@ const BTCGraph = () => {
     })
   }, []);
 
-  const loadingBar = <section ClassName="section__main"><CircularProgress className="chartProgress"/></section>;
+  const loadingBar = <section className="section__main"><CircularProgress className="chartProgress"/></section>;
 
   if (!isLoaded || !showChart) return loadingBar;
 
@@ -57,11 +57,8 @@ const BTCGraph = () => {
   }
 
   const renderPoints = BTCObject.map((item, i) => {
-    return `${i*wMultiplier}, ${normalizeNumber(item.value)}`;
+    return `${i*wMultiplier}, ${150-normalizeNumber(item.value)}`;
   })
-
-
-
 
   return (
     <article className="page__inside">

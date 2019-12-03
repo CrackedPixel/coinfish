@@ -18,7 +18,6 @@ const About = () => {
           <TeamIcon classNameParam="team__card" title="Tenzin R." content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"/>
           <TeamIcon classNameParam="team__card" title="Thomas K." content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"/>
           <TeamIcon classNameParam="team__card" title="Jonathan K." content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"/>
-          <TeamIcon classNameParam="team__card" title="Hentai M." content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"/>
         </div>
       </section>
     </article>

@@ -55,39 +55,58 @@ const NavBar = () => {
 
   return (
     <header>
+
+
+
+      
       <div className={menuClassName()}>
         <ChevronLeftIcon className="_closeMenu" onClick={() => toggleMenu(barOpen === 0)}/>
         {
           menuItems.map((item, i) => {
-          return <Link onClick={CloseMenuURL} key={i} to={item.to}>{item.title}</Link>
+            return <Link onClick={CloseMenuURL} key={i} to={item.to}>{item.title}</Link>
           })
         }
         <hr />
         {
           loginItems.map((item, i) => {
-          return <Link onClick={CloseMenuURL} key={i} to={item.to} className={item.cn}>{item.title}</Link>
+            return <Link onClick={CloseMenuURL} key={i} to={item.to} className={item.cn}>{item.title}</Link>
           })
         }
       </div>
+
+
+
+
       {<MenuIcon className="_openMenu" onClick={() => toggleMenu(barOpen > 0)}/>}
       <Link to="/" className="header__logo__container">
         <img className="header__logo" src={LogoPic} alt="site logo" />
         <span>CoinFish</span>
       </Link>
+
+
+
       <div className="header__navigation">
         {
           menuItems.map((item, i) => {
-          return <Link key={i} to={item.to}>{item.title}</Link>
+            return <Link key={i} to={item.to}>{item.title}</Link>
           })
         }
       </div>
       <div className="header__loginarea">
         {
           loginItems.map((item, i) => {
-          return <Link key={i} to={item.to} className={item.cn}>{item.title}</Link>
+            return <Link key={i} to={item.to} className={item.cn}>{item.title}</Link>
           })
         }
       </div>
+
+
+
+
+
+
+
+
     </header>
   )
 }
